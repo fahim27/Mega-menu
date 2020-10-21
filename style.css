@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ddd;
+
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ========= START THE  MAIN MENU  CSS======== */
+.menu {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    height: 100%;
+
+}
+
+.menu-item-list {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+}
+
+.menu-item-list li {
+    padding: 20px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* ========= END THE  MAIN MENU CSS======== */
+
+
+/* ========= START THE  SUB MENU  CSS======== */
+.sub-menu {
+    display: flex;
+    width: 95%;
+    min-height: 400px;
+    height: auto;
+    position: fixed;
+    background: #fff;
+    left: 2.5%;
+    flex-direction: row;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 3px 0px 3px 3px #eee;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: 600px;
+    overflow-x: scroll;
+    overflow-x: hidden;
+    justify-content: center;
+}
+
+/* ========= WHEN MAIN MENU LI HOVER, THEN SHOW THIS UNDER SUB MENU======== */
+.menu-item-list li:hover>.sub-menu {
+    visibility: visible;
+    opacity: 1;
+    transition: .3s;
+
+}
+
+
+
+.sub-menu-icon {
+    display: none;
+}
+
+.sub-sub-menu-icon {
+    display: none;
+}
+
+.sub-menu-item {
+    width: 200px;
+    min-height: 300px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sub-sub-item {
+    font-weight: normal;
+    text-transform: none;
+    padding: 3px 7px !important;
+    font-size: 16px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+
+
+/* =========START THE  MENU RESPONISVE CSS======== */
+
+@media only screen and (max-width: 900px) {
+
+    /* =========MAIN MENU DIFFRENT STYLE IN  RESPONSIVE VIEW======== */
+    .menu-item-list {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        background: green;
+        min-height: 600px;
+        visibility: hidden;
+        opacity: 0;
+        transition: .2s;
+        justify-content: left !important;
+
+
+    }
+
+    .menu-item-icon {
+        float: right;
+    }
+
+    #menu-toggle {
+        display: block;
+        font-size: 30px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    /* =========SUB MENU MENU DIFFRENT STYLE IN  RESPONSIVE VIEW======== */
+    .sub-menu {
+        display: none;
+        flex-direction: column;
+        width: 220px;
+        min-height: auto !important;
+        background: transparent;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        flex-direction: column;
+        overflow-x: hidden;
+        margin-left: 0px;
+        position: relative;
+        margin-left: 5px;
+    }
+
+    .sub-menu-item {
+        width: auto;
+        min-height: auto;
+        font-weight: normal;
+        text-transform: none;
+        padding: 8px 0px !important;
+
+
+    }
+
+    .sub-sub-item-list {
+        background: transparent;
+        width: 206px;
+        margin-left: 10px;
+        display: none;
+
+    }
+
+    .toggle-menu {
+        visibility: visible;
+        opacity: 1;
+
+    }
+
+
+    .sub-menu-icon {
+        display: flex;
+    }
+
+    .sub-menu-icon {
+        display: block;
+
+        float: right;
+        margin-right: 8px;
+    }
+
+    /* =========COLLAPSE SUB MENU======== */
+    .colapse-sub-menu {
+        display: flex;
+        transition: width .5s;
+    }
+
+    /* =========COLLAPSE SUB SUB MENU======== */
+    .colapse-sub-sub-menu {
+        display: block;
+        transition: width .5s;
+    }
+
+
+
+
+}
+
+/* =========FOR ICON ROTATE======== */
+.rotate {
+    transform: rotate(180deg);
+}
